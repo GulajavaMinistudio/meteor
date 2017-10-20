@@ -1,13 +1,21 @@
 ## v.NEXT
 
+* iOS icons and launch screens have been updated to support iOS 11
+  [Issue #9196](https://github.com/meteor/meteor/issues/9196)
+  [PR #9198](https://github.com/meteor/meteor/pull/9198)
+
 * Enables passing `false` to `cursor.count()` on the client to prevent skip
   and limit from having an effect on the result.
   [Issue #1201](https://github.com/meteor/meteor/issues/1201)
   [PR #9205](https://github.com/meteor/meteor/pull/9205)
 
-* iOS icons and launch screens have been updated to support iOS 11
-  [Issue #9196](https://github.com/meteor/meteor/issues/9196)
-  [PR #9198](https://github.com/meteor/meteor/pull/9198)
+* An `onExternalLogin` hook has been added to the accounts system, to allow
+  the customization of OAuth user profile updates.
+  [PR #9042](https://github.com/meteor/meteor/pull/9042)
+
+* `Accounts.config` now supports a `bcryptRounds` option that
+  overrides the default 10 rounds currently used to secure passwords.
+  [PR #9044](https://github.com/meteor/meteor/pull/9044)
 
 ## v1.5.2.2, 2017-10-02
 
