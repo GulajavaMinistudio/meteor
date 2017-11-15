@@ -1,6 +1,6 @@
 Package.describe({
   name: 'meteor-base',
-  version: '1.2.0',
+  version: '1.3.0',
   // Brief, one-line summary of the package.
   summary: 'Packages that every Meteor app needs',
   // By default, Meteor will default to using README.md for documentation.
@@ -28,10 +28,11 @@ Package.onUse(function(api) {
     // Runtime support for Meteor 1.5 dynamic import(...) syntax.
     'dynamic-import',
 
-    // This package uses the user agent of each incoming HTTP request to
-    // decide whether to inject a SockJS-loading <script> tag into the
-    // <head> of the response document.
+    // These packages use the user agent of each incoming HTTP request to
+    // decide whether to inject <script> tags into the <head> of the
+    // response document to polyfill Web Sockets and/or ES5 support.
     'sockjs-shim',
+    'es5-shim',
 
     // Push code changes to the client and automatically reload the page
     'hot-code-push'
