@@ -2005,8 +2005,8 @@ main.registerCommand({
     let changed = false;
 
     for (target of pluginsToAdd) {
-      let [id, version] = target.split('@');
-
+      let { id, version } =
+        require('../cordova/package-id-version-parser.js').parse(target);
       const newId = cordova.newPluginId(id);
 
       if (!(version && utils.isValidVersion(version, {forCordova: true}))) {
