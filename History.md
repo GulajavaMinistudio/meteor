@@ -2,6 +2,9 @@
 
 * The `reify` npm package has been updated to version 0.14.1.
 
+* The `meteor-babel` npm package has been updated to version
+  7.0.0-beta.40-1.
+
 * The `optimism` npm package has been updated to version 0.4.0.
 
 * The `minifier-js` package has been updated to use `uglify-es` 3.3.10.
@@ -15,6 +18,11 @@
   `meteor-babel` now runs with the `loose:true` option, as required by
   other (optional) plugins like `@babel/plugin-proposal-decorators`.
   [Issue #9628](https://github.com/meteor/meteor/issues/9628)
+
+* Meteor's `promise` package has been updated to support
+  [`Promise.prototype.finally`](https://github.com/tc39/proposal-promise-finally).
+  [Issue 9639](https://github.com/meteor/meteor/issues/9639)
+  [PR #9663](https://github.com/meteor/meteor/pull/9663)
 
 ## v1.6.1, 2018-01-19
 
