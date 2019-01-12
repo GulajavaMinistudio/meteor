@@ -8,6 +8,14 @@ N/A
 
 ### Changes
 
+* In Meteor packages, `client/` and `server/` directories no longer have
+  any special meaning. In application code, `client/` directories are
+  ignored during the server build, and `server/` directories are ignored
+  during the client build, as before. This special behavior previously
+  applied to packages as well, but has now been removed.
+  [Issue #10393](https://github.com/meteor/meteor/issues/10393)
+  [PR #10414](https://github.com/meteor/meteor/pull/10414)
+
 ## v1.8.0.2, 2019-01-07
 
 ### Breaking changes
@@ -18,13 +26,13 @@ N/A
 
 ### Changes
 
-- The [React tutorial](https://www.meteor.com/tutorials/react/creating-an-app)
+* The [React tutorial](https://www.meteor.com/tutorials/react/creating-an-app)
   has been updated to address a number of inaccuracies due to changes in
   recent Meteor releases that were not fully incorporated back into the
   tutorial. As a reminder, Meteor now supports a `meteor create --react`
   command that can be used to create a new React-based app quickly.
 
-- Fixed a bug where modules named with `*.app-tests.js` (or `*.tests.js`)
+* Fixed a bug where modules named with `*.app-tests.js` (or `*.tests.js`)
   file extensions sometimes could not be imported by the
   `meteor.testModule` entry point when running the `meteor test` command
   (or `meteor test --full-app`).
@@ -54,11 +62,6 @@ N/A
   version as `chrome`, and browser names are now processed
   case-insensitively by the `modern-browsers` package.
   [PR #10334](https://github.com/meteor/meteor/pull/10334)
-
-* The `meteor-promise` package has been updated to version 0.8.7, which
-  includes a [commit](https://github.com/meteor/promise/commit/bbe4f0d20b70417950381aea112993c4cc8c1168)
-  that should prevent memory leaks when excess fibers are discarded from
-  the `Fiber` pool.
 
 * Fixed a module caching bug that allowed `findImportedModuleIdentifiers`
   to return the same identifiers for the modern and legacy versions of a
