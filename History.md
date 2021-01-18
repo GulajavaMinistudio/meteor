@@ -2,7 +2,7 @@
 
 ### Breaking changes
 
-N/A
+* `http` package has been deprecated. Please start on migrating towards the [fetch](https://atmospherejs.com/meteor/fetch) package instead.
 
 ### Migration steps
 
@@ -10,7 +10,7 @@ N/A
 
 ### Changes
 
-## v1.12.1, TBD
+## v1.12.1, 2021-01-06
 
 ### Breaking changes
 
@@ -33,6 +33,9 @@ N/A
   - Fixes problem on IE because of modern syntax (arrow function).
   
 * `meteor-babel@7.10.6`
+  - Allows to disable sourceMap generation [#36](https://github.com/meteor/babel/pull/36)
+  
+* `babel-compiler@7.5.5`
   - Allows to disable sourceMap generation [#36](https://github.com/meteor/babel/pull/36)
 
 ## v1.12, 2020-12-04
