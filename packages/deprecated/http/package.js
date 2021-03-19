@@ -8,6 +8,7 @@ Npm.depends({
 });
 
 Package.onUse(function (api) {
+  api.versionsFrom('1.12.1');
   api.use([
     'url',
     // This package intentionally does not depend on ecmascript, so that
